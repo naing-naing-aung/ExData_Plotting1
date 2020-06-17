@@ -3,7 +3,7 @@ link <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_c
 download.file(link, "house.zip", method = "curl")
 house <- read.csv2(unzip("house.zip"), na.strings = "?")
 house1 <- house %>%
-        mutate(Date = dmy(Date), Time == hms(Time)) %>%
+        mutate(Date = dmy(Date), Time = hms(Time)) %>%
         filter(Date=="2007-02-01" | Date=="2007-02-02") %>%
         mutate_if(is.character, as.numeric)
 ggplot(data = house1) +
