@@ -23,7 +23,7 @@ ggplot(data = dat, aes(x = as.numeric(Time), y = sub_values,
         labs(x = NULL, y = "Energy sub metering") +
         theme(legend.box = "vertical", legend.position = c(1, 1),
               legend.title = element_blank(),
-              legend.justification = c(1, 0),
+              legend.justification = c(1, 1),
               legend.background = element_rect(color = "black"),
               panel.background = element_rect(color = "black"))
         
