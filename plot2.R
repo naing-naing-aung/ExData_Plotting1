@@ -16,7 +16,8 @@ ggplot(data = dat, mapping = aes(as.numeric(Time), Global_active_power)) +
         geom_path() +
         scale_x_time(breaks = c("0", "86400", "172800"),
                      labels = c("Thu", "Fri", "Sat")) +
-        labs(x = "", y = "Global Active Power (kilowatts)")
+        labs(x = "", y = "Global Active Power (kilowatts)") +
+        theme(panel.background = element_rect(color = "black"))
 
 
 dev.copy(png, "plot2.png")
