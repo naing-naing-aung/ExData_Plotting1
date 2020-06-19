@@ -51,8 +51,7 @@ plot_4 <- ggplot(data = dat, mapping = aes(as.numeric(Time), Global_reactive_pow
         labs(x = "datetime", y = "Global_reactive_power") +
         theme(panel.background = element_rect(color = "black"))
 
-
-        
+grid.arrange(plot_1, plot_2, plot_3, plot_4, nrow = 2)
 
 dev.copy(png, "plot4.png")
 dev.off()
